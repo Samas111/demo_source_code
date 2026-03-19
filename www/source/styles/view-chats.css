@@ -1,0 +1,92 @@
+/* view-chats.css */
+:root {
+  --background-color: #0D0314;
+  --card-color: #180028;
+  --neon-pink: #ff3b7a;
+  --nav-border: rgba(255, 255, 255, 0.1);
+}
+
+body {
+    background-color: var(--background-color);
+    color: white;
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+}
+
+.list-header {
+    padding: 20px;
+    font-size: 22px;
+    font-weight: 800;
+    border-bottom: 1px solid var(--nav-border);
+}
+
+.chat-item {
+    display: flex;
+    align-items: center;
+    padding: 15px 20px;
+    text-decoration: none;
+    color: inherit;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+.avatar-wrapper {
+    position: relative;
+    flex-shrink: 0;
+}
+
+.list-avatar {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 1.5px solid var(--nav-border);
+}
+
+/* The small pink notification dot */
+.unread-dot {
+    position: absolute;
+    bottom: 2px;
+    right: 2px;
+    width: 14px;
+    height: 14px;
+    background-color: var(--neon-pink);
+    border: 3px solid var(--background-color);
+    border-radius: 50%;
+}
+
+.chat-info {
+    flex: 1;
+    margin-left: 15px;
+    min-width: 0; /* Crucial for ellipsis to work */
+}
+
+.contact-name {
+    font-weight: 600;
+    font-size: 16px;
+    margin-bottom: 2px;
+}
+
+.preview {
+    display: flex;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.5);
+    min-width: 0;
+}
+
+/* LIMIT THE MESSAGE LENGTH */
+.msg-text {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    flex-shrink: 1;
+}
+
+.msg-meta {
+    flex-shrink: 0;
+    white-space: nowrap;
+}
+
+.unread-bold {
+    color: white;
+    font-weight: 600;
+}

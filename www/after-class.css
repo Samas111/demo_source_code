@@ -1,0 +1,126 @@
+:root {
+    --bg: #0f0213;
+    --card: #1b0a21;
+    --accent: #ff2d78;
+    --accent-gradient: linear-gradient(135deg, #ff2d78 0%, #ff6b6b 100%);
+    --danger: #ff4d4d;
+  --font-family-main: 'Inter', sans-serif;
+}
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+body {
+    background: var(--bg);
+    color: white;
+    font-family: var(--font-family-main);
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    width: 95%;
+    margin: auto;
+    background: var(--card);
+    border-radius: 15px;
+    padding: 30px 10px;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.badge-end {
+    background: var(--accent);
+    padding: 6px 14px;
+    border-radius: 5px;
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+.came{
+    font-weight: 600;
+    margin-bottom: 15px;
+    opacity: 0.8;
+    font-size: 0.8rem;
+}
+.user-list {
+    margin-top: 20px;
+}
+
+.user-row {
+    display: flex;
+    align-items: center;
+    padding: 12px;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    margin-bottom: 10px;
+    border: 1px solid transparent;
+    background: rgba(255, 255, 255, 0.02);
+}
+
+.user-row:hover {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.user-row:active {
+    transform: scale(0.98);
+}
+
+.user-row img {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 15px;
+}
+
+.user-row span {
+    font-weight: 500;
+    font-size: 16px;
+    flex-grow: 1;
+}
+
+.user-row.absent {
+    opacity: 0.4;
+    filter: grayscale(1);
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.status-tag {
+    display: none;
+    background: var(--danger);
+    color: white;
+    padding: 4px 10px;
+    border-radius: 8px;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.user-row.absent .status-tag {
+    display: block;
+}
+
+.btn-submit {
+    background: var(--accent-gradient);
+    border: none;
+    color: white;
+    width: 100%;
+    padding: 18px;
+    border-radius: 20px;
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.btn-submit:active {
+    transform: scale(0.97);
+    opacity: 0.9;
+}

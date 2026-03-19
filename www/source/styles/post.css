@@ -1,0 +1,68 @@
+.modal{
+    background: var(--card-color);
+    width: 90%;
+    margin: auto;
+    text-align: center;
+    margin-top: 55%;
+    border-radius: 10px;
+}
+.modal img{
+    width: 60px;
+    transform: translate(0px, -20px);
+}
+.modal span{
+    font-weight: 700;
+    font-size: 1rem;
+    display: block;
+    margin-top: 0;
+    padding: 0;
+    transform: translate(0px, -15px);
+}
+.modal a{
+    width: 95%;
+    text-align: center;
+    display: block;
+    margin: auto;
+    padding: 12px 0px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    background: var(--gradient-color);
+    margin-bottom: 10px;
+    border-radius: 10px;
+    color: white;
+    text-decoration: none;
+    outline: none;
+    border: none;
+}
+.modal a:nth-of-type(2){
+    position: relative;
+    color: white;
+    border-radius: 10px;
+    font-weight: 600;
+    background: var(--gradient-color);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.modal a:nth-of-type(2)::before{
+    content: "";
+    position: absolute;
+    inset: 0;
+    padding: 2px;
+    background: var(--gradient-color);
+    border-radius: 10px;
+    -webkit-mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+}
+.modal p{
+    font-size: 0.75rem;
+    font-weight: 300;
+    opacity: 0.5;
+    padding-bottom: 20px;
+    padding-top: 5px;
+}
+

@@ -1,0 +1,152 @@
+:root{
+    --card-color: #1b0f29;
+    --text-color: #ffffff;
+    --gradient-color: linear-gradient(to right, #FF5143, #FF1B73);
+}
+
+body{
+    background-color: #0f0717;
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+    color: var(--text-color);
+}
+
+.creator-window{
+    width: 100%;
+    top: 0;
+    color: var(--text-color);
+}
+
+.creator-window .progress-bar{
+    width: 100%;
+    background-color: #330352;
+    height: 7px;
+    border-radius: 0;
+    overflow: hidden;
+    position: relative;
+}
+
+.creator-window .progress-bar .bar1,
+.creator-window .progress-bar .bar2,
+.creator-window .progress-bar .bar3{
+    height: 7px;
+    background: var(--gradient-color);
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-bottom-right-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.creator-window .progress-bar .bar1{ width: 40%; }
+.creator-window .progress-bar .bar2{ width: 55%; opacity: 0.4; }
+.creator-window .progress-bar .bar3{ width: 70%; opacity: 0.4; }
+
+.creator-window .flex-wrapper{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    background-color: var(--card-color);
+}
+
+.creator-window .flex-wrapper .left-text,
+.creator-window .flex-wrapper .right-text{
+    opacity: 60%;
+    padding: 12px 5%;
+    font-size: 0.8rem;
+}
+
+.creator-window h1{
+    font-weight: 800;
+    font-size: 1.4rem;
+    text-align: center;
+    margin-top: 25px;
+}
+
+.creator-window .pfp{
+    width: 110px;
+    height: 110px;
+    margin: 25px auto 10px auto;
+    position: relative;
+    border-radius: 50%;
+}
+
+.creator-window .pfp img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    display: block;
+    position: relative;
+    z-index: 2;
+}
+
+.creator-window .pfp::before{
+    content: "";
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background: var(--gradient-color);
+}
+
+.edit-form{
+    width: 80%;
+    margin: 25px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.input-block{
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.input-block label{
+    font-size: 0.8rem;
+    opacity: 60%;
+    font-weight: 600;
+}
+
+.edit-username{
+    display: flex;
+    justify-content: center;
+}
+
+.edit-username input{
+    padding: 10px 12px;
+    width: 70%;
+    border-radius: 8px;
+    border: none;
+    background: var(--card-color);
+    color: var(--text-color);
+    font-size: 1rem;
+}
+
+.bio-edit textarea{
+    width: 100%;
+    min-height: 90px;
+    padding: 12px;
+    border-radius: 8px;
+    border: none;
+    background: var(--card-color);
+    color: var(--text-color);
+    resize: none;
+    font-size: 0.9rem;
+}
+
+.save-btn{
+    width: 100%;
+    padding: 12px 0;
+    background: var(--gradient-color);
+    border-radius: 10px;
+    color: white;
+    font-weight: 700;
+    font-size: 1rem;
+    border: none;
+    cursor: pointer;
+}

@@ -1,0 +1,46 @@
+.teaser-cont{
+    width: 90%;
+    margin: 20% auto;
+    text-align: center;
+}
+.teaser-cont img{
+    width: 100%;
+}
+.search-wrapper {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background: var(--background-color);
+}
+
+.search-input-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+#contactSearch {
+    width: 90%;
+    padding: 12px 15px 12px 40px;
+    box-sizing: border-box;
+    margin: auto;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: var(--background-color);
+    color: white;
+    font-size: 14px;
+    border-radius: 12px;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.search-icon {
+    position: absolute;
+    left: 15px;
+    color: rgba(255, 255, 255, 0.4);
+    pointer-events: none;
+    display: none;
+}
+
+.hidden {
+    display: none !important;
+}

@@ -1,0 +1,214 @@
+:root {
+  --background-color: #0D0314;
+  --gradient-color: linear-gradient(to right, #FF5143, #FF1B73);
+  --font-size-main: 12px;
+  --font-family-main: 'Inter', sans-serif;
+  --text-color: #ffffff;
+  --card-color: #180028;
+  --primary-color: #EB4F8B;
+
+  --nav-glass: rgba(12, 4, 18, 0.55);
+  --nav-border: rgba(255, 255, 255, 0.05);
+  --nav-inside-glow: rgba(255, 35, 110, 0.06);
+  --nav-shadow: rgba(0, 0, 0, 0.55);
+
+  --neon-pink: #ff3b7a;
+  --neon-pink-2: #ff6aa6;
+}
+* {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+html, body, #content, .pages-track, .page {
+    overscroll-behavior: none !important;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    color: white;
+    font-family: 'Inter', sans-serif;
+    background: var(--background-color);
+    overflow: hidden;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+nav{
+    top: 0;
+    width: 90%;
+    background-color: var(--background-color);
+    display: flex;
+    align-items: center;
+    padding: 15px 5%;
+}
+
+
+nav span{
+    flex: 1;
+    text-align: center;
+    color: var(--text-color);
+    font-weight: 500;
+    font-size: 1.1rem;
+    opacity: 0.4;
+}
+
+nav a{
+    width: 44px;
+    display: flex;
+    justify-content: center;
+}
+
+nav a img:first-child{
+    width: 15px;
+    opacity: 0.3;
+}
+nav a img:nth-child(2){
+    width: 35px;
+    opacity: 0.3;
+}
+
+
+.modal{
+    background: var(--card-color);
+    width: 90%;
+    margin: auto;
+    text-align: center;
+    margin-top: 15%;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    padding-bottom: 0;
+}
+.modal img{
+    width: 60px;
+    transform: translate(0px, -20px);
+}
+.modal span{
+    font-weight: 800;
+    font-size: 1.3rem;
+    display: block;
+    margin: 0;
+    padding: 0;
+    transform: translate(0px, -12px);
+}
+.modal .under{
+    padding: 0;
+    margin: 0;
+    font-size: 0.9rem;
+    font-weight: 400;
+    transform: translate(0px, -10px);
+    margin-bottom: 5px;
+}
+
+.modal a{
+    width: 95%;
+    text-align: center;
+    display: block;
+    margin: auto;
+    padding: 12px 0px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    background: var(--gradient-color);
+    margin-bottom: 10px;
+    border-radius: 10px;
+    color: white;
+    text-decoration: none;
+    outline: none;
+    border: none;
+}
+.modal a:nth-of-type(2){
+    position: relative;
+    color: white;
+    border-radius: 10px;
+    font-weight: 600;
+    background: var(--gradient-color);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.modal p{
+    font-size: 0.75rem;
+    font-weight: 300;
+    opacity: 0.5;
+    padding-bottom: 20px;
+    padding-top: 5px;
+}
+.hint{
+    width: 100%;
+    text-align: center;
+    background: var(--gradient-color);
+    padding: 7px 0px;
+    font-size: 0.9rem;
+}
+.hint p{
+    margin: 0;
+    padding: 0;
+}
+
+.drafts-section {
+    width: 90%;
+    margin: auto;
+    text-align: left;
+    top: 0;
+}
+.drafts-section:last-child {
+    margin: 10px auto 20px;
+}
+
+.drafts-section h3 {
+    font-size: 0.9rem;
+    color: white;
+    opacity: 0.6;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+    margin-top: 0;
+}
+
+.draft-card {
+    display: flex;
+    align-items: center;
+    background: var(--card-color);
+    padding: 12px;
+    margin-bottom: 5px;
+    border-radius: 15px;
+    text-decoration: none;
+    color: white;
+    border: 2px solid var(--primary-color);
+    transition: transform 0.2s;
+}
+
+.draft-img {
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    object-fit: cover;
+    margin-right: 15px;
+}
+
+/* Draft Title */
+.draft-info span {
+    display: block;
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+/* "Continue" Action Text */
+.draft-info p {
+    margin: 0;
+    font-size: 0.75rem;
+    color: #ff4757;
+}
+a{
+    -webkit-touch-callout: none;
+    user-select: none;
+}
+.container-post{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}

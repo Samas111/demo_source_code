@@ -13,3 +13,7 @@ Tato ukázka není určena ke spuštění jako kompletní aplikace.
 Jedná se o výřez backendové logiky zaměřený na strukturu kódu, práci s databází a základní principy návrhu.
 
 Některé závislosti a části projektu byly záměrně odstraněny.
+
+## Full Verze
+
+Pro celou verzi si na App Store nebo Google play stáhněte produkční verzi aplikace.

@@ -17,3 +17,5 @@ Některé závislosti a části projektu byly záměrně odstraněny.
 ## Full Verze
 
 Pro celou verzi si na App Store nebo Google play stáhněte produkční verzi aplikace.
+
+-- OLD / MESSY / OUTDATED -- Imrpoved version in updated repository

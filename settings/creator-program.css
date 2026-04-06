@@ -1,0 +1,113 @@
+:root {
+  --background-color: #0D0314;
+  --gradient-color: linear-gradient(to right, #FF5143, #FF1B73);
+  --font-size-main: 12px;
+  --font-family-main: 'Inter', sans-serif;
+  --text-color: #ffffff;
+  --card-color: #180028;
+  --primary-color: #EB4F8B;
+}
+body{
+    margin: 0;
+    padding: 0;
+    background: var(--gradient-color);
+    font-family: var(--font-family-main);
+    color: white;
+    text-align: center;
+}
+.nav{
+    width: 100%;
+    margin-top: 20%;
+}
+.nav h1{
+    font-size: 2.7rem;
+    font-weight: 800;
+    margin: 0;
+    padding: 0;
+}
+.nav span{
+    font-size: 1rem;
+    font-weight: 300;
+    font-style: italic;
+    opacity: 0.8;
+}
+.pfp{
+    width: 100%;
+    margin-top: 15%;
+}
+.pfp img{
+    width: 35%;
+}
+.message-box{
+    width: 80%;
+    margin: auto;
+    margin-top: 20%;
+}
+.message-box span{
+    font-weight: 700;
+    font-size: 1rem;
+}
+.message-box p{
+    font-weight: 400;
+    opacity: 0.8;
+    font-size: 0.8rem;
+}
+.message-box a{
+    font-weight: 500;
+    font-size: 0.8rem;
+    text-decoration: underline;
+    color: white;
+}
+.submit-button{
+    width: 80%;
+    margin: auto;
+    margin-top: 28%;
+    outline: none;
+    border: none;
+}
+.submit-button .top{
+    background-color: var(--gradient-color);
+    padding: 4px 0.5px;
+    width: 99%;
+    font-weight: 700;
+    font-size: 0.6rem;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border: 1px solid white;
+}
+.submit-button .button{
+    background: white;
+    display: block;
+    width: 100%;
+    padding: 12px 0px 14px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    outline: none;
+    border: none;
+}
+.submit-button .button p{
+    background: var(--gradient-color);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 600;
+    padding: 0;
+    margin: 0;
+    outline: none;
+    border: none;
+}
+.lol{
+    font-size: 0.7rem;
+    padding: 0;
+    margin-top: 2%;
+    margin-bottom: 8%;
+}
+.disabled{
+    opacity: 0.7;
+}
+.nav-back{
+    position: absolute;
+    top: 25px;
+    left: 5%;
+    width: 20px;
+    opacity: 100%;
+}

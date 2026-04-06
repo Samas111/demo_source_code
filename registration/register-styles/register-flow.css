@@ -1,0 +1,338 @@
+:root {
+  --background-color: #0D0314;
+  --bg-top: #1a0423;
+  --bg-bottom: #09020f;
+  --gradient-color: linear-gradient(to right, #FF5143, #FF1B73);
+  --gradient-darker: linear-gradient(to right, #CC165B, #CC4036);
+  --font-size-main: 12px;
+  --font-family-main: 'Inter', sans-serif;
+  --text-color: #ffffff;
+  --card-color: #110816;
+  --primary-color: #EB4F8B;
+}
+* {
+  -webkit-tap-highlight-color: transparent !important;
+  user-select: none;
+}
+/* --- 1. THE GOAT BACKGROUND (FIXED & LOCKED) --- */
+html,
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: #000;
+    position: fixed;
+    font-family: var(--font-family-main);
+}
+
+.pfp-viewport {
+    position: fixed;
+    inset: 0;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.pfp-bg {
+    position: absolute;
+    top: -10%;
+    left: -10%;
+    width: 120%;
+    height: 120%;
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    transform: rotate(15deg) translateZ(0);
+    pointer-events: none;
+}
+
+.pfp-column {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    flex-shrink: 0;
+    will-change: transform;
+}
+
+.pfp {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    background-size: cover;
+    background-position: center;
+    flex-shrink: 0;
+    opacity: 0.4;
+    filter: brightness(0.6);
+}
+
+@keyframes moveUp {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(-50%);
+    }
+}
+
+@keyframes moveDown {
+    from {
+        transform: translateY(-50%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+.col-odd {
+    animation: moveUp 120s linear infinite;
+}
+
+.col-even {
+    animation: moveDown 120s linear infinite;
+}
+
+.overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    background: radial-gradient(circle, rgba(0, 0, 0, 0) 20%, rgba(0, 0, 0, 0.95) 100%);
+    pointer-events: none;
+}
+
+/* --- 2. UI LAYER --- */
+.ui-container {
+    position: fixed;
+    inset: 0;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    pointer-events: none;
+}
+
+.progress-bar-wrap {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+#progress-fill {
+    width: 20%;
+    height: 100%;
+    background: var(--gradient-color);
+    transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+header {
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    pointer-events: auto;
+}
+
+.back-btn {
+    position: absolute;
+    left: 20px;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 32px;
+    cursor: pointer;
+}
+
+.logo {
+    font-weight: 600;
+    font-size: 18px;
+}
+
+/* --- 3. FORM PROPORTIONS --- */
+.form-wrap {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 0 32px 50px 32px;
+    pointer-events: auto;
+}
+
+.step-content {
+    display: none;
+    flex-direction: column;
+    height: 100%;
+    text-align: center;
+    color: white;
+}
+
+.step-content.active {
+    display: flex;
+}
+
+.input-group {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+}
+
+label {
+    font-size: 15px;
+    font-weight: 700;
+    margin-bottom: 12px;
+    color: white;
+}
+
+input {
+    width: 100%;
+    padding: 14px 20px;
+    border-radius: 14px;
+    border: none;
+    background: white;
+    font-size: 17px;
+    margin-bottom: 24px;
+    box-sizing: border-box;
+    font-family: var(--font-family-main);
+}
+
+.btn-next {
+    width: 100%;
+    padding: 16px;
+    border-radius: 14px;
+    border: none;
+    background: var(--gradient-color);
+    color: white;
+    font-weight: 600;
+    font-size: 16px;
+    cursor: pointer;
+    font-family: var(--font-family-main);
+}
+
+.btn-skip {
+    background: none;
+    border: none;
+    color: rgba(255, 255, 255, 0.7);
+    margin-top: 20px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+/* --- 4. PFP UPLOAD --- */
+.pfp-preview-container {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: #222;
+    margin: 0 auto 30px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    border: 4px solid #FF3D68;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.pfp-preview-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: none;
+}
+
+.pfp-preview-container svg {
+    width: 60px;
+    height: 60px;
+    fill: #555;
+}
+
+/* --- 5. FINAL CARD --- */
+.welcome-title {
+    font-size: 32px;
+    font-weight: 800;
+    margin-bottom: 8px;
+}
+
+.welcome-sub {
+    font-size: 16px;
+    opacity: 0.7;
+    margin-bottom: 40px;
+}
+
+.glass-card {
+    background: var(--card-color);
+    border-radius: 30px;
+    padding: 50px 20px;
+    position: relative;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.glass-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 30px;
+    padding: 2px;
+    background: linear-gradient(135deg, #FF3D68, #FF5143);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask-composite: exclude;
+    pointer-events: none;
+}
+
+.final-pfp {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    border: 3px solid #FF3D68;
+    margin-bottom: 15px;
+    object-fit: cover;
+}
+
+.final-name {
+    font-size: 24px;
+    font-weight: 800;
+    margin-bottom: 4px;
+}
+
+.final-role {
+    font-size: 14px;
+    opacity: 0.6;
+    font-weight: 500;
+}
+
+/* --- 6. REQUIREMENTS LIST --- */
+.reqs {
+    list-style: none;
+    padding: 0;
+    margin-top: -10px;
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+
+.reqs li {
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    opacity: 0.5;
+    transition: 0.3s;
+}
+
+.reqs li.valid {
+    opacity: 1;
+    color: #fff;
+}
+
+.reqs li::before {
+    content: '✕';
+    margin-right: 12px;
+    font-weight: 900;
+}
+
+.reqs li.valid::before {
+    content: '✓';
+}

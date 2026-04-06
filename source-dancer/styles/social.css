@@ -1,0 +1,277 @@
+*, body{
+    font-family: var(--main-font-family);
+}
+.date-info{
+    background: var(--gradient-color);
+    color: white;
+    text-align: center;
+    padding: 10px 0px;
+}
+.date-info p{
+    font-weight: 300;
+    font-size: 0.85rem;
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+}
+.date-info p strong{
+    font-weight: 600;
+    display: inline-block;
+}
+.user-campain{
+    width: 90%;
+    margin: auto;
+    margin-top: 15px;
+}
+.user-campain h1{
+    font-size: 1.5rem;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 5px;
+    margin-top: 30px;
+}
+.user-campain p{
+    font-size: 0.8rem;
+    font-weight: 400;
+    margin: 0;
+    padding: 0;
+    opacity: 70%;
+}
+
+
+
+
+.user-row {
+    width: 90%;
+    margin: 20px auto;
+    background-color: var(--card-color);
+    border-radius: 5px;
+}
+
+.user-inner {
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+    box-sizing: border-box;
+}
+
+.user-pfp {
+    width: 55px;
+    height: 55px;
+    margin-right: 12px;
+}
+
+.user-pfp img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.user-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.user-top {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.user-name {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #fff;
+}
+
+.verify-badge {
+    width: 16px;
+    height: 16px;
+    object-fit: contain;
+}
+
+.dot {
+    color: #aaa;
+    font-size: 0.6rem;
+    margin: 0 2px;
+}
+
+.user-level {
+    font-size: 0.6rem;
+    color: #aaa;
+}
+
+.user-desc {
+    font-size: 0.6rem;
+    font-style: italic;
+    margin-top: 2px;
+    color: #d8c27f;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.user-desc img {
+    width: 12px;
+    height: 12px;
+    opacity: 0.8;
+}
+
+
+.harmonogram {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.empty-card {
+    display: flex;
+    align-items: center;
+    background: rgba(255,255,255,0.03);
+    border: 1px dotted rgba(255,255,255,0.25);
+    border-radius: 8px;
+    padding: 12px 15px;
+    gap: 15px;
+}
+
+.empty-card .circle {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.15);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 0.8rem;
+}
+
+.empty-card span {
+    color: rgba(255,255,255,0.7);
+    font-size: 0.8rem;
+}
+
+.title-har{
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.8);
+    width: 90%;
+    margin: auto;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.creator-program-card {
+    margin-top: 24px;
+    padding: 22px 24px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    background: #00000013;
+    border: 2px solid #ffffff24;
+    border-radius: 22px;
+    font-family: var(--main-font-family);
+}
+
+.creator-icon {
+    width: 26px;
+    height: 26px;
+    min-width: 26px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--gradient-color);
+    border-radius: 50%;
+}
+
+.creator-text h2 {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #ffffff;
+    margin: 0;
+}
+
+.creator-text p {
+    margin-top: 4px;
+    font-size: 0.7rem;
+    color: rgba(255, 255, 255, 0.6);
+    font-family: var(--main-font-family);
+}
+
+
+
+
+
+
+
+.creators-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+    margin: 25px 0 60px;
+    width: 90%;
+    margin: auto;
+    margin-top: 20px;
+    padding-bottom: 70px;
+}
+
+.creator-card {
+    background: #1F0630;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.creator-card:hover {
+    transform: translateY(-2px);
+}
+
+.creator-card img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.creator-info {
+    padding: 5px 10px 10px 10px;
+}
+
+.creator-info h3 {
+    font-size: 0.75rem;
+    font-weight: 600;
+    margin: 0;
+    padding-bottom: 5px;
+    line-height: 1.1;
+}
+
+.creator-info span {
+    font-size: 0.6rem;
+    opacity: .7;
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+    display: block;
+}
+
+.creator-card.highlight {
+    background: #300051;
+}
+
+.creator-card.highlight::after {
+    content: "VY";
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 9px;
+    letter-spacing: .08em;
+    padding: 4px 7px;
+    border-radius: 20px;
+    background: var(--gradient-color);
+}

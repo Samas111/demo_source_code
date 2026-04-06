@@ -139,17 +139,14 @@ header("Location: registration/register-server-logic/auto.php")
         </div>
 
         <div class="reason-text">
-            Optimalizace výkonu<br>
-            Opravy bugů<br>
-            Posílení zabezpečení<br>
-            Zlepšení stability systému<br>
+            Reason<br>
         </div>
 
         <div class="progress-wrapper">
             <div class="progress-bar" id="progressBar"></div>
         </div>
 
-        <div class="countdown" id="countdown">Odhad: 2 Minuty</div>
+        <div class="countdown" id="countdown">Odhad: x Minuty</div>
     </div>
 
     <div class="footer" id="serverTime">Připojeno k systému</div>
